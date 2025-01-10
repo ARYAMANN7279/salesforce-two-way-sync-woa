@@ -9,7 +9,7 @@ authn: # how to authenticate to this datasource
 
 retry: #default retry logic on all API calls. Can be overriden at the task level when calling the API
   when:
-    status: [500,501] #default 500
+    status: [500, 501] #default 500
     message: my custom expected message for retry
   max_attempts: 3
   type: exponential # can be constant or random as well. Check documentation
@@ -17,14 +17,14 @@ retry: #default retry logic on all API calls. Can be overriden at the task level
   max_internal: PT15s
 
 headers: #these will be set in every API call to the datasource
-  Content-Type:    application/json
+  Content-Type: application/json
   #x-apikey:       <% config.my_bank_api.auth.x_apikey %>
   #Environment:    <% config.my_bank_api.auth.Environment %>
 
-# Any additional data you keep in the config will be available 
+# Any additional data you keep in the config will be available
 # in the respective datasource's GSDatasource implementation class inside `this.config`
 data:
-  # clientId:       <% config.my_bank_api.auth.clientId %>
-  # clientSecret:   <% config.my_bank_api.auth.clientSecret %>
-  # grantType:      <% config.my_bank_api.auth.grantType %>
+  # clientId: <% config.my_bank_api.auth.clientId %>
+  # clientSecret: <% config.my_bank_api.auth.clientSecret %>
+  # grantType: <% config.my_bank_api.auth.grantType %>
 some_random_key: some_value
