@@ -1,0 +1,93 @@
+# ONE
+http.get./testing/task/{id}:
+  summary: Fetch Task
+  description: Fetch Task from database
+  fn: com.biz.testing.task.one
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: object
+
+# CREATE
+http.post./testing/task:
+  summary: Create a new Task
+  description: Create Task from database
+  fn: com.biz.testing.task.create
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/testing/Task'
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            type: object
+
+# UPDATE
+http.put./testing/task/{id}:
+  summary: Update a Task
+  description: Update Task from database
+  fn: com.biz.testing.task.update
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/testing/Task'
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '204':
+      content:
+        application/json:
+          schema:
+            type: object
+
+# DELETE
+http.delete./testing/task/{id}:
+  summary: Delete a Task
+  description: Delete Task from database
+  fn: com.biz.testing.task.delete
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '202':
+      content:
+        application/json:
+          schema:
+            type: object
+
+# SEARCH
+http.post./testing/task/search:
+  summary: Fetch multiple Task
+  description: Fetch multiple Task from database
+  fn: com.biz.testing.task.search
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+

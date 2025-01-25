@@ -1,0 +1,18 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  output          = "./prisma-clients/testing" //just change the name of prisma schema here 
+  previewFeatures = ["metrics"] // to be used in case you want to generate metrics for prisma queries for telemetry. 
+}
+
+model Task {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String?
+  completed   Boolean   @default(false)
+  dueDate     DateTime?
+}

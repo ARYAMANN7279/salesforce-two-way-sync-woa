@@ -18,7 +18,7 @@ docs:
       name: Apache 2.0
       url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
   servers:
-    - url: 'http://localhost:3000'
+    - url: 'http://localhost:4000'
       description: Public API server
     - url: 'http://localhost:3001'
       description: Internal API server
@@ -27,11 +27,11 @@ request_body_limit: 20000 # maximum size of the request body (in bytes)
 file_size_limit: 50000 # How big a file can be uploaded (in bytes)
 
 #jwt settings to run by default on every event
-# authn:
-#   jwt:
-#     secretOrKey: <% config.auth.secretOrKey %> #the secret
-#     audience: <% config.auth.audience %> #aud in jwt token
-#     issuer: <% config.auth.issuer %> #iss in jwt token
+authn:
+  jwt:
+    secretOrKey: <% config.auth.secretOrKey %> #the secret
+    audience: <% config.auth.audience %> #aud in jwt token
+    issuer: <% config.auth.issuer %> #iss in jwt token
 
 # authorization policies to run by default on every event
 # Uncomment this to start checking user roles.

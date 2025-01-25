@@ -7,7 +7,23 @@ node_env: NODE_ENV #where NODE_ENV is an environment variable set by you. This w
 #     x_apikey: MY_BANK_X_API_KEY # env var
 #     Environment: MY_BANK_ENVIRONMENT # env var
 
-# auth:
-#   secretOrKey: JWT_SECRET
-#   audience: JWT_AUDIENCE
-#   issuer: JWT_ISSUER
+auth:
+  secretOrKey: JWT_SECRET
+  audience: JWT_AUDIENCE
+  issuer: JWT_ISSUER
+
+salesforce:
+  client_id: SALESFORCE_CLIENT_ID
+  client_secret: SALESFORCE_CLIENT_SECRET
+  username: SALESFORCE_USERNAME
+  password: SALESFORCE_PASSWORD
+
+kafka:
+  broker:
+    KAFKA_BROKER
+    # __name: KAFKA_BROKER
+    # __format: json
+  client_id: KAFKA_CLIENT_ID
+  ssl_key_path: KAFKA_SSL_KEY_PATH
+  ssl_cert_path: KAFKA_SSL_CERT_PATH
+  ssl_ca_path: KAFKA_SSL_CA_PATH

@@ -1,0 +1,7 @@
+summary: Delete Task
+tasks:
+  - id: testing_task_delete
+    fn: datasource.testing.Task.delete
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>

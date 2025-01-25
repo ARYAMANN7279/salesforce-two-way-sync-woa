@@ -1,0 +1,15 @@
+Task:
+  type: object
+  properties:
+    title:
+      type: string
+    description:
+      type: string
+      nullable: true
+    completed:
+      type: boolean
+      default: false
+    dueDate:
+      type: string
+      format: date-time
+      nullable: true

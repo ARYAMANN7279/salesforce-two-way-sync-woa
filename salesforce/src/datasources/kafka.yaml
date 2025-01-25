@@ -1,0 +1,11 @@
+type: kafka
+clientId: 'kafka_proj'
+brokers:
+  - 'localhost:9092'
+ssl:
+  reject: false
+  # Uncomment and provide the proper SSL files if needed:
+  # key: /path/to/key
+  # cert: /path/to/cert
+  # ca: /path/to/ca
+groupId: 'kafka_consumer_group'

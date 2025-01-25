@@ -1,0 +1,8 @@
+summary: Update Task
+tasks:
+  - id: testing_task_update
+    fn: datasource.testing.Task.update
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>
+      data: <% inputs.body %>

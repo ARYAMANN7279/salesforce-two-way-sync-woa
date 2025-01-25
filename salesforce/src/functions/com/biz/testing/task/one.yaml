@@ -1,0 +1,7 @@
+summary: Fetch Task
+tasks:
+  - id: testing_task_one
+    fn: datasource.testing.Task.findUnique
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>

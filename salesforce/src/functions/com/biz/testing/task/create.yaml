@@ -1,0 +1,6 @@
+summary: Create Task
+tasks:
+  - id: testing_task_create
+    fn: datasource.testing.Task.create
+    args:
+      data: <% inputs.body %>

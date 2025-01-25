@@ -1,0 +1,18 @@
+# type: salesforce
+# event_source_name: salesforce_sub
+# config:
+#   client_id: <%config.salesforce.client_id%>
+#   client_secret: <%config.salesforce.client_secret%>
+#   username: <%config.salesforce.username%>
+#   password: <%config.salesforce.password%>
+#   login_url: https://test.salesforce.com
+#   pubsub_api: true
+#   subscriptions:
+#     - event: orderPlaced__e
+#       handler: handle_platform_event
+
+type: salesforce
+loginUrl: https://iitk-dev-ed.develop.my.salesforce.com/
+username: kartikeya@iitk.sandbox
+password: Kanpurcity#100h2O20dQ1PvoB4hcJmzsXrRvDm
+# securityToken: h2O20dQ1PvoB4hcJmzsXrRvDm

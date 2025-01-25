@@ -1,0 +1,12 @@
+http.post./salesforce/publish_event:
+  fn: publish_event
+  body:
+    type: object
+    required: [orderId, customerName, status]
+    properties:
+      orderId:
+        type: string
+      customerName:
+        type: string
+      status:
+        type: string

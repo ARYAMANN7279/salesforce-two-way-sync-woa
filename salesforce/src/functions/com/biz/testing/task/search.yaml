@@ -1,0 +1,5 @@
+summary: Fetch many Task
+tasks:
+  - id: testing_task_search
+    fn: datasource.testing.Task.findMany
+    args: {}
