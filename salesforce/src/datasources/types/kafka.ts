@@ -177,3 +177,4 @@ export {
   CONFIG_FILE_NAME,
   DEFAULT_CONFIG,
 };
+export default DataSource;
