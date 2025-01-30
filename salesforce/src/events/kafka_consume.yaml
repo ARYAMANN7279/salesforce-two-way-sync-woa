@@ -1,0 +1,8 @@
+# event for consume data from Topic
+kafka.publish-producer1.kafka_consumer_group: 
+  fn: kafka_consume
+  body:
+    content:
+      application/json: 
+        schema:
+          type: string
