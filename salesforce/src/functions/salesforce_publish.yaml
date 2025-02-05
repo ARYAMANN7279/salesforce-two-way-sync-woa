@@ -1,0 +1,10 @@
+id: salesforce_publish
+summary: Publish an OrderUpdate__e event to Salesforce
+tasks:
+  - id: publishEvent
+    fn: datasource.salesforce.create
+    args:
+      sobject: 'OrderUpdate__e'
+      record:
+        OrderId__c: <% inputs.body.OrderId %>
+        Status__c: <% inputs.body.Status %>

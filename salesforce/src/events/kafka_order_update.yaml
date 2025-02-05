@@ -1,0 +1,16 @@
+kafka.publish-producer1.kafka_proj:
+  id: kafka_mongo_consumer
+  fn: mongo_store
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            OrderId:
+              type: string
+            Status:
+              type: string
+          required:
+            - OrderId
+            - Status

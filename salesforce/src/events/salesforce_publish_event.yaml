@@ -1,0 +1,24 @@
+http.post./publish-order-update:
+  fn: salesforce_publish
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            OrderId:
+              type: string
+            Status:
+              type: string
+          required:
+            - OrderId
+            - Status
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string

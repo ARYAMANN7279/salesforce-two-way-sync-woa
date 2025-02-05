@@ -8,7 +8,7 @@ http.get./helloworld:
       schema:
         type: string
   responses:
-    200:
+    '200':
       content:
         application/json:
           schema:

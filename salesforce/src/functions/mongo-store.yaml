@@ -1,0 +1,10 @@
+id: mongo_store
+summary: Save the OrderUpdate__e event payload to MongoDB
+tasks:
+  - id: storeOrderUpdate
+    fn: datasource.mongoose.SomeModel.create
+    args:
+      model: OrderUpdate
+      document:
+        orderId: <% inputs.body.OrderId %>
+        status: <% inputs.body.Status %>

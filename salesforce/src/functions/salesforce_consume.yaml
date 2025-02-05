@@ -1,0 +1,8 @@
+id: salesforce_consume
+summary: Processes Salesforce platform events and forwards them to Kafka.
+tasks:
+  - id: publishToKafka
+    fn: datasource.kafka.producer
+    args:
+      topic: 'kafka_topic_for_salesforce'
+      message: <% inputs.body %>

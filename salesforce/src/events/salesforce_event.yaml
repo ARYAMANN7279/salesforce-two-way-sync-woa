@@ -1,0 +1,26 @@
+salesforce.OrderUpdate__e.salesforce:
+  id: salesforce_consumer
+  fn: kafka-publish
+  body:
+    description:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            OrderId:
+              type: string
+            Status:
+              type: string
+          required:
+            - OrderId
+            - Status
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              outcome:
+                type: string

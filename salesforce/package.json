@@ -43,6 +43,7 @@
 		"@godspeedsystems/plugins-axios-as-datasource": "^1.0.3",
 		"@godspeedsystems/plugins-express-as-http": "^1.0.17",
 		"@godspeedsystems/plugins-kafka-as-datasource-as-eventsource": "^1.0.6",
+		"@godspeedsystems/plugins-mongoose-as-datasource": "^1.0.7",
 		"@godspeedsystems/plugins-prisma-as-datastore": "^2.0.7",
 		"@godspeedsystems/plugins-salesforce-as-datasource-as-eventsource": "^1.0.4",
 		"@prisma/client": "^5.22.0",

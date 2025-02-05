@@ -1,25 +1,13 @@
-# type: salesforce
-# datasource_name: salesforce_pub
-# config:
-#   client_id: <%config.salesforce.client_id%>
-#   client_secret: <%config.salesforce.client_secret%>
-#   username: <%config.salesforce.username%>
-#   password: <%config.salesforce.password%>
-#   login_url: https://test.salesforce.com
-#   token_url: https://test.salesforce.com/services/oauth2/token
-
 type: salesforce
-loginUrl: https://iitk-dev-ed.develop.my.salesforce.com/
+loginUrl: https://login.salesforce.com
+instanceUrl: https://iitk-dev-ed.develop.my.salesforce.com/
 username: kartikeya@iitk.sandbox
 password: Kanpurcity#100h2O20dQ1PvoB4hcJmzsXrRvDm
-# securityToken: h2O20dQ1PvoB4hcJmzsXrRvDm
+securityToken: h2O20dQ1PvoB4hcJmzsXrRvDm
+clientId: 3MVG9PwZx9R6_UrdZ5SFCFt_A0C3tcZ_VgjO7OMx1HbwUtMzy5wwGecQTTywRVquiFoN8tNHK4OY_2_jLL6ji
+clientSecret: 8C6187A42D7F1A11EB46A6FCFB40DC56BF16CB726014A73F39BFE011C3710A15
 # oauth2,
-# username,
-# password,
-# securityToken,
 # serverUrl,
 # sessionId,
-# loginUrl,
 # accessToken,
 # refreshToken,
-# instanceUrl,

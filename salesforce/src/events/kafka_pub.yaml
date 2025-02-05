@@ -1,20 +1,10 @@
-'http.post./kafka-pub':
-  fn: kafka-publish
+# event for consume data from Topic
+kafka.publish-producer1.kafka_proj:
+  id: kafka__consumer
+  fn: kafka_consume
   body:
+    description: The body of the query
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            message:
-              type: string
-          required: ['message']
-  responses:
-    200:
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              name:
-                type: string
+          type: string
