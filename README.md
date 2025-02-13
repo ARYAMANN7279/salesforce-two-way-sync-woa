@@ -41,7 +41,7 @@ The system is composed of the following key components:
 
 ## Contribution
 - Kartikeya Shukla (https://github.com/kartik3yaS)
-- Aryamann Srivastava​ (
+- Aryamann Srivastava​ (https://github.com/ARYAMANN7279)
 
 ## Mentor
 - Ayush Ghai
