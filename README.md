@@ -7,6 +7,7 @@ A robust system built with the Godspeed Meta Framework to achieve real-time, bid
 - [Features](#features)
 - [Architecture](#architecture)
 - [Technologies](#technologies)
+- [Getting Started](#getting-started)
 - [Contribution](#contribution)
 - [Mentor](#mentor)
 
@@ -38,6 +39,44 @@ The system is composed of the following key components:
 - Salesforce API
 - Apache Kafka
 - MongoDB & Mongoose
+
+## Getting Started
+
+### Prerequisites
+- **Node.js v18+** (or Bun.js)
+- **npm**
+- **Git**
+- A preferred code editor (e.g., VS Code)
+
+### Step 1: Install Godspeed CLI
+Install the required dependencies by running:
+
+\`\`\`bash
+npm install -g @godspeedsystems/godspeed npm i @godspeedsystems/plugins-salesforce-as-datasource-as-eventsource npm i @godspeedsystems/plugins-kafka-as-datasource-as-eventsource npm i @godspeedsystems/plugins-mongoose-as-datasource
+\`\`\`
+
+### Environment Variables
+Add the necessary Login details, secret key, token etc. in src/datasources/salesforce.yaml file.
+
+### Running the project
+1. ***Start the Project: Run the project using the Godspeed CLI:
+   
+  \`\`\`bash
+  godspeed serve
+  \`\`\`
+  It may be possible that /api-docs endpoint may not be reachable. In that case test the below API using postman:
+  ***POST
+  \`\`\`bash
+  http://localhost:4000/publish-order-update 
+  \`\`\`
+  Body(JSON): OrderId & Status
+
+2. ***After doing the above POST request, all the workflows will start and managed by godspeed framework efficiently. Below is it's explanation:
+   a) That POST req will start salesforce_publish function which will in turn publish an event to salesforce platform event event bus.
+   b) Using salesforce plugin, 'publish-producer1' kafka topic is actively listening for any new event to recieve.
+   c) So as soon as any event comes it gets stored in this kafka topic.
+   d) Similary an event for kafka-consume is also defined which listens for any latest event to come into kafka topic.
+   e) As it gets comes, kafka_consume function gets triggered from there that event gets stored in MongoDB database thorugh mongoose plugin.
 
 ## Contribution
 - Kartikeya Shukla (https://github.com/kartik3yaS)
