@@ -51,9 +51,9 @@ The system is composed of the following key components:
 ### Step 1: Install Godspeed CLI
 Install the required dependencies by running:
 
-\`\`\`bash
+```bash
 npm install -g @godspeedsystems/godspeed npm i @godspeedsystems/plugins-salesforce-as-datasource-as-eventsource npm i @godspeedsystems/plugins-kafka-as-datasource-as-eventsource npm i @godspeedsystems/plugins-mongoose-as-datasource
-\`\`\`
+```
 
 ### Environment Variables
 Add the necessary Login details, secret key, token etc. in src/datasources/salesforce.yaml file.
@@ -61,14 +61,14 @@ Add the necessary Login details, secret key, token etc. in src/datasources/sales
 ### Running the project
 1. ***Start the Project: Run the project using the Godspeed CLI:
    
-  \`\`\`bash
+  ```bash
   godspeed serve
-  \`\`\`
+  ```
   It may be possible that /api-docs endpoint may not be reachable. In that case test the below API using postman:
   ***POST
-  \`\`\`bash
+  ```bash
   http://localhost:4000/publish-order-update 
-  \`\`\`
+  ```
   Body(JSON): OrderId & Status
 
 2. ***After doing the above POST request, all the workflows will start and managed by godspeed framework efficiently. Below is it's explanation:
