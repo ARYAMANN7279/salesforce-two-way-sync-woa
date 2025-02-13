@@ -1,7 +1,7 @@
 # event for consume data from Topic
 kafka.publish-producer1.kafka_proj:
   id: kafka_mongo_consumer
-  fn: mongo_store
+  fn: kafka_consume
   body:
     content:
       application/json:
