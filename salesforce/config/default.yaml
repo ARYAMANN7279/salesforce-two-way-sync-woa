@@ -9,14 +9,3 @@ log:
   bindings: # should pid and hostname be enabled in pino log bindings.
     pid: true
     hostname: true
-
-salesforce:
-  clientId: 3MVG9PwZx9R6_UrdZ5SFCFt_A0C3tcZ_VgjO7OMx1HbwUtMzy5wwGecQTTywRVquiFoN8tNHK4OY_2_jLL6ji
-  clientSecret: 8C6187A42D7F1A11EB46A6FCFB40DC56BF16CB726014A73F39BFE011C3710A15
-  username: kartikeya@iitk.sandbox
-  password: Kanpurcity#100h2O20dQ1PvoB4hcJmzsXrRvDm
-  tokenUrl: https://test.salesforce.com/services/oauth2/token
-
-kafka:
-  client_id: 'order-service'
-  brokers: 172.23.33.206:9092
