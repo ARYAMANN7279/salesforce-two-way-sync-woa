@@ -1,8 +1,8 @@
 type: salesforce
 loginUrl: https://login.salesforce.com
-instanceUrl: URL
-username: USERNAME
-password: PASSWORD
-securityToken: TOKEN
-clientId: ID
-clientSecret: SECRET
+instanceUrl: your_instance_url
+username: your_username
+password: your_password
+securityToken: yuour_token
+clientId: your_client_id
+clientSecret: your_client_secret
