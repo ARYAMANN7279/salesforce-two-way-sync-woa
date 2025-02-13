@@ -71,12 +71,12 @@ Add the necessary Login details, secret key, token etc. in src/datasources/sales
   ```
   Body(JSON): OrderId & Status
 
-2. ***After doing the above POST request, all the workflows will start and managed by godspeed framework efficiently. Below is it's explanation:
-   a) That POST req will start salesforce_publish function which will in turn publish an event to salesforce platform event event bus.
-   b) Using salesforce plugin, 'publish-producer1' kafka topic is actively listening for any new event to recieve.
-   c) So as soon as any event comes it gets stored in this kafka topic.
-   d) Similary an event for kafka-consume is also defined which listens for any latest event to come into kafka topic.
-   e) As it gets comes, kafka_consume function gets triggered from there that event gets stored in MongoDB database thorugh mongoose plugin.
+2. After doing the above POST request, all the workflows will start and managed by godspeed framework efficiently. Below is it's explanation:
+   - a) That POST req will start salesforce_publish function which will in turn publish an event to salesforce platform event event bus.
+   - b) Using salesforce plugin, 'publish-producer1' kafka topic is actively listening for any new event to recieve.
+   - c) So as soon as any event comes it gets stored in this kafka topic.
+   - d) Similary an event for kafka-consume is also defined which listens for any latest event to come into kafka topic.
+   - e) As it gets comes, kafka_consume function gets triggered from there that event gets stored in MongoDB database thorugh mongoose plugin.
 
 ## Contribution
 - Kartikeya Shukla (https://github.com/kartik3yaS)
