@@ -1,7 +1,10 @@
-# function for consume data
 id: kafka_consumer
-summary: consumer
+summary: Process Kafka event to update MongoDB
 tasks:
-  - id: set_consumer
-    fn: com.gs.return
-    args: <% inputs %>
+  - id: update_contact_in_db_task
+    fn: datasources.mongoose.Order.findOneAndUpdate
+    args:
+      - { email: '<% inputs.body.orderId %>' }
+      - { phone: '<% inputs.body.status %>' }
+      - { updatedAt: '<% inputs.body.status %>' }
+      - { new: true, upsert: true }
