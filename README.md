@@ -59,7 +59,7 @@ npm install -g @godspeedsystems/godspeed npm i @godspeedsystems/plugins-salesfor
 Add the necessary Login details, secret key, token etc. in src/datasources/salesforce.yaml file.
 
 ### Running the project
-1. ***Start the Project: Run the project using the Godspeed CLI:
+1. Start the Project: Run the project using the Godspeed CLI:
    
   ```bash
   godspeed serve
