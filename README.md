@@ -1,4 +1,11 @@
 # **Salesforce-two-way-sync-woa**
+
+## Contribution
+- Kartikeya Shukla (https://github.com/kartik3yaS)
+- Aryamann Srivastava​ (https://github.com/ARYAMANN7279)
+
+## Mentor
+- Ayush Ghai
 A robust system built with the Godspeed Meta Framework to achieve real-time, bidirectional synchronization between Salesforce and an internal MongoDB database using Apache Kafka for event streaming.
 
 ## Table of Contents
@@ -8,8 +15,6 @@ A robust system built with the Godspeed Meta Framework to achieve real-time, bid
 - [Architecture](#architecture)
 - [Technologies](#technologies)
 - [Getting Started](#getting-started)
-- [Contribution](#contribution)
-- [Mentor](#mentor)
 
 ## Overview
 The Salesforce Two-Way Synchronization System is designed to replicate and synchronize data between Salesforce and an internal MongoDB database in near real-time. Leveraging Salesforce APIs, Kafka as the messaging bus, and MongoDB for data storage, this project ensures consistent data across systems and supports real-time analytics and operational reporting.
@@ -77,10 +82,3 @@ Add the necessary Login details, secret key, token etc. in src/datasources/sales
    - So as soon as any event comes it gets stored in this kafka topic.
    - Similary an event for kafka-consume is also defined which listens for any latest event to come into kafka topic.
    - As it gets comes, kafka_consume function gets triggered from there that event gets stored in MongoDB database thorugh mongoose plugin.
-
-## Contribution
-- Kartikeya Shukla (https://github.com/kartik3yaS)
-- Aryamann Srivastava​ (https://github.com/ARYAMANN7279)
-
-## Mentor
-- Ayush Ghai
