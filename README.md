@@ -6,6 +6,7 @@
 
 ## Mentor
 - Ayush Ghai
+  
 A robust system built with the Godspeed Meta Framework to achieve real-time, bidirectional synchronization between Salesforce and an internal MongoDB database using Apache Kafka for event streaming.
 
 ## Table of Contents
